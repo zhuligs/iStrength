@@ -8,7 +8,10 @@ def PRMD():
     # for iat in range(nat):
     # amass(iat) =   
 
-    # calculate the initial kinetic energies 
+    # covert the velocitis into fractional coordinates
+    vPosCurrent = cell.get_frac_velo()
+
+    # calculate the initial kinetic energy
     
     rkin = 0.
     for iat in range(nat):
@@ -23,4 +26,9 @@ def PRMD():
     print("PRESSURE, ENERGY", pressure, etot_in)
     # vol = det(lat)
     enthalpy = energy + pressure*vol
+    
+    if verb > 0:
+        print(' ')
+        
+    #acceleration()
     
