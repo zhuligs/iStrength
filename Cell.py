@@ -9,8 +9,7 @@ class Cell:
             typat = None,
             lattice = None,
             positions = None,
-            lat_cart_velo = None,
-            lat_frac_velo = None,
+            lat_velo = None,
             atom_cart_velo = None,
             atom_cart_velo = None,
             stress = None):
@@ -68,17 +67,11 @@ class Cell:
     def get_symbols( self ):
         return self.symbols
 
-    def set_lat_cart_velo( self, v ):
-        self.lat_cart_velo = np.array(v)
+    def set_lat_velo( self, v ):
+        self.lat_velo = np.array(v)
 
-    def get_lat_cart_velo( self ):
-        return self.lat_cart_velo
-
-    def set_lat_frac_velo( self, v ):
-        self.lat_frac_velo = np.array(v)
-
-    def get_lat_frac_velo( self ):
-        return self.lat_frac_velo
+    def get_lat_velo( self ):
+        return self.lat_velo
 
     def set_atom_cart_velo( self, v):
         self.atom_cart_velo = np.array(v)
